@@ -2,8 +2,6 @@
 
 set -e
 
-cd "${2:-.}" || echo "source root not found"
-
 [ -f yarn.lock ] && yarn install
 [ -f package-lock.json ] && npm install
 
