@@ -1,4 +1,4 @@
-name: ESLint Action
+name: ESLint Action eslintrc
 description: Lint your Javascript projects with inline lint error annotations on pull requests.
 branding:
   icon: code
