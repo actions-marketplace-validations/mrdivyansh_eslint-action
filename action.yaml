@@ -7,12 +7,16 @@ inputs:
   repo-token:
     description: GitHub repository token for publishing inline lint annotations. Should be secrets.GITHUB_TOKEN.
     required: true
-  source-root:
-    description: Root directory to lint files in.
+  eslint-rc:
+    description: Path to eslintrc
+    required: false
+  execute-on-files:
+    description: Root directory to lint files in
     required: false
 runs:
   using: docker
   image: Dockerfile
   args:
   - "${{ inputs.repo-token }}"
-  - "${{ inputs.source-root }}"
+  - "${{ inputs.eslint-rc }}"
+  - "${{ inputs.execute-on-files }}"
